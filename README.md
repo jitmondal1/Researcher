@@ -94,7 +94,7 @@ space invites exploration and wonder, reminding us of the mysteries that lie bey
 ## Webserver Enumeration 
 
 * The webserver has apache2 default page
-![[Screenshot 2024-12-04 175206.png]]
+![[apache2 default page]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20175206.png)
 
 * Now, we have to do directory brute force
 * Using gobuster we will do directory brute force
