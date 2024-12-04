@@ -129,9 +129,8 @@ Finished
 ```
 
 * There is a directory called myblog. In this directory there is a wordpress website running.
-![[Pasted image 20241204180100.png]]
-
-![[Pasted image 20241204180203.png]]
+![[myblog]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20180036.png)
+![[research]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20180149.png)
 
 #### Enumeration Using the WPScan 
 ---
@@ -389,42 +388,43 @@ Trying carlos / colombia Time: 00:00:37 <                                       
 
 
 *  Now we will login to the WordPress website using those credential
-![[Pasted image 20241204181605.png]]
-
+![[login]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20181559.png)
 
 * We found a custom extension called "Researcher"
-![[Pasted image 20241204181715.png]]
+![[Extension]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20181641.png)
 
 * We found that this extension read file from the server and display to the website's research page.
-![[Pasted image 20241204182005.png]]
+![[file]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20181851.png)
 
 * Now we try to read the file ```/etc/passwd``` . We change the file path to ```../../../../etc/passwd``` and save.
-
-![[Pasted image 20241204182228.png]]
+![[/etc/passwd]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20182223.png)
 
 * After change the file path, the research page display this
-![[Pasted image 20241204182410.png]]
+![[research page]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20182352.png)
 
-* We try to see the source of the page. It show the base64 enocde output of the file
-![[Pasted image 20241204182459.png]]
+* We try to see the source of the page. It show the base64 enocde output
+![[output]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20182452.png)
 
 * now we need to decode the base64 encoded string
-![[Pasted image 20241204182649.png]]
+![[Decode]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20182644.png)
 
 * Now need to see the ```.bash_history``` of the user. So we give ```/home/carlos/.bash_history``` to read the bash history.
-![[Pasted image 20241204183340.png]]
+![[.bash_history]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20183237.png)
+
 * In the source code
-![[Pasted image 20241204183500.png]]
+![[source]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20183457.png)
+
 * After decode the base64 encoded ```.bash_history```. We can see the bash_history of the user. Where user copy the id_rsa to id_rsa.bak
-![[Pasted image 20241204183623.png]]
+![[.bash_history]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20183553.png)
 
 * Try read the ```id_rsa.bak``` 
-![[Pasted image 20241204183845.png]]
+![[id_rsa.bak]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20183812.png)
+
 * The base 64 encoded format of the ```id_rsa.bak``` is
-![[Pasted image 20241204184011.png]]
+![[id_rsa.bak]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20183919.png)
 
 * After decode the base64 encoded string, we get the ssh key to login the system.
-![[Pasted image 20241204184113.png]]
+![[decode]](https://github.com/jitmondal1/Researcher/blob/main/Screenshot%202024-12-04%20184042.png)
 
 * Then we write the ```id_rsa``` key in ```id_rsa```file.
 * Then we give the sufficient permission to the file.
