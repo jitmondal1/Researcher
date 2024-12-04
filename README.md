@@ -1,10 +1,12 @@
+# Researcher (TryHackMe - Lab)
+
 #### Description
----
+
 An enigmatic signal originating from a distant galaxy has led you to a hidden research facility located beneath an asteroid field. This facility is rumored to house ancient, advanced alien technology that could revolutionize our understanding of the cosmos.
 Your objective is to breach the facility's sophisticated security systems. Only by gaining access to its data and systems can you uncover the profound secrets and potentially groundbreaking knowledge concealed within.
 
 ## Nmap Scan
----
+
 * Initial nmap scan
 ```code
 ┌──(kali㉿kali)-[~]
@@ -47,7 +49,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.03 seconds
 
 
 ## FTP Enumeration
----
+
 ```code
 ┌──(kali㉿kali)-[~]
 └─$ ftp 10.10.202.113                                                                                                                      
@@ -90,7 +92,7 @@ space invites exploration and wonder, reminding us of the mysteries that lie bey
 
 
 ## Webserver Enumeration 
----
+
 * The webserver has apache2 default page
 ![[Screenshot 2024-12-04 175206.png]]
 
